@@ -1,0 +1,110 @@
+/* Updated styles for the Navigation component with background removed and display flex retained for image and nav */
+.navbar {
+  color: #fff;
+  font-size: 24px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+.flex-container{
+  display: flex;
+  justify-content: space-evenly;
+  gap: 180px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.image-container {
+  display: flex;
+  /* Retain display flex for the image container */
+  align-items: center;
+  /* Center vertically within the container */
+  width: 80px;
+  height: auto;
+  /* padding: 10px; */
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+
+}
+
+.nav-links {
+  display: flex;
+  /* Retain display flex for the navigation links */
+  gap: 50px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  /* Text color */
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  /* Text color */
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .bar {
+    width: 20px;
+    height: 3px;
+    background-color: #fff;
+    /* Text color */
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+
+  .navbar.active {
+    background-color: rgba(255, 255, 255, 0.9);
+    /* Add a semi-transparent white background */
+  }
+
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 80%;
+    background-color: transparent;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .image-container img {
+    max-width: 50%;
+    height: auto;
+    display: none;
+
+  }
+}

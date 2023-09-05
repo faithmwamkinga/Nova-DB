@@ -1,5 +1,6 @@
 import Header from './components/Navbar/header';
 import Navigation from './components/navigation/navigation';
+import Team from './components/Team/Team';
 
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <div>
      <Navigation/>
      <Header/>
+     <Team/>
     </div>
   );
 }
